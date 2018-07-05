@@ -1,0 +1,29 @@
+
+7월 03, 2018 07:12:36.34 NEW SESSION
+7월 03, 2018 07:12:36.34 [14120:740:0703/071236.338:ERROR:install_util.cc(589)] Unable to create registry key HKLM\SOFTWARE\Policies\Google\Chrome for reading result=2
+7월 03, 2018 09:48:07.22 Unable to read VR Path Registry from C:\Users\Mirim\AppData\Local\openvr\openvrpaths.vrpath
+7월 03, 2018 09:48:07.23 [14120:740:0703/094807.228:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 09:48:07.23 [14120:740:0703/094807.229:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 10:00:46.49 [14120:740:0703/100046.495:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 10:00:46.49 [14120:740:0703/100046.495:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:04:35.71 [14120:740:0703/120435.712:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:04:35.71 [14120:740:0703/120435.712:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:39:13.29 [14120:740:0703/123913.292:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:39:13.29 [14120:740:0703/123913.292:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:52:42.54 [14120:740:0703/125242.542:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 12:52:42.54 [14120:740:0703/125242.542:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 13:36:14.12 [14120:740:0703/133614.128:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 13:36:14.12 [14120:740:0703/133614.128:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 14:14:37.44 [14120:740:0703/141437.442:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
+7월 03, 2018 14:14:37.44 [14120:740:0703/141437.442:ERROR:in_progress_cache_impl.cc(172)] Cache is not initialized, cannot AddOrReplaceEntry.
+7월 03, 2018 14:14:37.44 [14120:740:0703/141437.442:ERROR:in_progress_cache_impl.cc(188)] Cache is not initialized, cannot RetrieveEntry.
+7월 03, 2018 15:25:50.49 [14120:392:0703/152550.492:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -107
+7월 03, 2018 15:25:50.49 [14120:392:0703/152550.492:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -107
+7월 03, 2018 15:25:50.49 [14120:392:0703/152550.497:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -107
+7월 03, 2018 15:25:51.72 [14120:392:0703/152551.720:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -107
+7월 03, 2018 15:25:51.72 [14120:392:0703/152551.727:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -107
+7월 03, 2018 15:26:12.13 [14120:392:0703/152612.134:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -100
+7월 03, 2018 15:38:34.58 [14120:740:0703/153834.583:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 15:38:34.58 [14120:740:0703/153834.583:ERROR:CONSOLE(32)] "Uncaught TypeError: Cannot read property 'displayName' of undefined", source: chrome://settings/lazy_load.crisper.js (32)
+7월 03, 2018 18:50:47.40 [14120:392:0703/185047.402:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -100
+7월 03, 2018 18:50:47.65 [14120:392:0703/185047.653:ERROR:ssl_client_socket_impl.cc(1026)] handshake failed; returned -1, SSL error code 1, net_error -100

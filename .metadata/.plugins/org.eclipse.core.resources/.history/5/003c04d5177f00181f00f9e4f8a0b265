@@ -1,0 +1,200 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.Random"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/jquery.plugin.html2canvas.js"></script>
+
+<title>Insert title here</title>
+</head>
+<style>
+
+	.button{
+		background:#1AAB8A;
+		color: #fff;
+		border: none;
+		position:relative;
+		height: 40px;
+		font-size: 13pt;
+		padding: 0 2em;
+		cursor: pointer;
+		transition: 800ms ease all;
+		outline: none;
+		margin-top:3%;
+	}
+	
+	.button:hover{
+  		background:#fff;
+  		color:#1AAB8A;
+  		border-bottom: 1px solid #1AAB8A;
+  		border-top:1px solid #1AAB8A; 
+	}
+	
+	.s{
+		font-size:15pt;
+		font-weight: 600;
+	}
+
+
+</style>
+<body>
+<div style="font-family: NANUMBARUNGOTHICLIGHT;">
+	<%! int[] mr_num;
+	String bundan;
+	%>
+	<%
+		request.setCharacterEncoding("UTF-8");
+		int r;
+		bundan = request.getParameter("bun_num");
+		int dan = Integer.parseInt( request.getParameter("bun_num"));
+		
+	
+		if(request.getParameter("m_num")==null){
+			String m_num = "";
+			
+		}else{
+			String m_num = request.getParameter("m_num");
+			String[] ms_num = m_num.split(",");
+			mr_num = new int[ms_num.length];;
+			for(int i = 0; i<ms_num.length; i++){
+				mr_num[i] = Integer.parseInt(ms_num[i]);
+			}
+		}
+		
+		int b_num = Integer.parseInt(bundan.substring(0, 1));
+		int p_num = Integer.parseInt(request.getParameter("p_num"));
+		Random rand = new Random();
+		int[] resNum = new int[p_num];
+		
+		List<Integer> items_res = new ArrayList<Integer>();
+		for (int i = 0; i < p_num; i++) {
+			resNum[i] = rand.nextInt(p_num) + 1;
+			for (int j = 0; j < i; j++) {
+				if (resNum[i] == resNum[j]) {
+					i--;
+				}
+			}
+		}
+		
+		
+		
+	%>
+
+
+	<center>
+		<br>
+		<br>
+		<h1>
+			<div>
+				<label style="color: #1AAB8A;">자리</label>를 <label
+					style="color: #1AAB8A;">바꿔</label>보자!
+			</div>
+		</h1>
+		<br>
+		<br>
+		<br>
+		<form method = "post">
+			<%
+				for (int i = 0; i < resNum.length; i++) {
+			%>
+			<input type="hidden" name="test" value=<%=resNum[i]%> />
+			<%
+			items_res.add(resNum[i]);
+				}
+			
+			//전체 랜덤수
+			for(int i = 0; i <items_res.size(); i++){
+				System.out.println(items_res.get(i));
+			}
+			
+			//결번 번호
+			List<Integer> items_mr = new ArrayList<Integer>();
+			for(int i = 0; i <mr_num.length; i++){
+				System.out.println(mr_num[i]);
+				items_mr.add(mr_num[i]);
+			}
+			
+			
+			
+			System.out.println("제거어ㅓㅓㅓㅓ-----------------------------");
+			
+			/* for(int i = 0; i < items_mr.size(); i++){
+				items_res.remove(items_mr.get(i));
+			} */
+			
+			/* items_res.remove(3);
+			
+			for(int i = 0; i <items_res.size(); i++){
+				System.out.println(items_res.get(i));
+			} */
+			
+			for(int i = 0; i <items_res.size(); i++){
+				for(int j = 0; j < items_mr.size(); j++){
+					if(items_res.get(i).equals(items_mr.get(j))){
+						items_res.remove(i);
+					}
+				}
+			}
+			
+			for(int i = 0; i <items_res.size(); i++){
+				System.out.println(items_res.get(i));
+				resNum[i] = items_res.get(i);
+			}
+			
+			
+			
+			%>
+
+
+			<input type="hidden" name="b_num" value="<%=b_num%>">
+			
+			<table style = "margin-bottom:30px">
+					<tr>
+						<td style = "background-color: #1AAB8A; width: 300px; height: 50px; text-align: center;"><center>칠판</center></td>
+					</tr>
+				</table>
+		
+			<table border=1 width="800px" height="600px" 
+				style="border-spacing: 30px 30px; text-align: center;">
+				
+				
+				<tr>
+				
+					<%
+						for (int i = 0; i < p_num-items_mr.size(); i++) {
+					%>
+
+					<%
+					
+						if ((i + 1) % 2 == 0) {
+					%>
+					<td style="height: 30px; width: 40px; text-align: center;"><label class = "s"><%=resNum[i]%></label></td>
+					<%
+						} else {
+					%>
+					<td style="height: 30px; width: 40px; text-align: center; margin-left:50px;"><label class = "s"><%=resNum[i]%></label></td>
+					<%
+						}
+					%>
+					<%
+						if ((i + 1) % (b_num * 2) == 0) {
+							
+					%>
+					
+				</tr>
+
+				<%		}
+		}
+%>
+			</table>
+			
+			<form><input type="button" value="다시 바꾸기" onClick="window.location.reload()" class="button"></form>
+</body>
+</html>
